@@ -1,0 +1,12 @@
+.bottom-panel input {
+  padding: 12px 20px;
+}
+.bottom-panel button {
+  width: 150px;
+}
+
+.bottom-panel .new-post-label {
+  width: auto;
+  flex-grow: 1;
+  font-style: italic;
+}

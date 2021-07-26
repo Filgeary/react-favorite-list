@@ -1,12 +1,19 @@
 .app {
   margin: 0 auto;
-  padding: 40px;
+  padding: 50px;
+  padding-bottom: 70px;
   width: 80%;
   max-width: 800px;
   text-align: center;
   border: 2px solid tomato;
+  border-radius: 8px;
+  box-shadow: 10px 10px 0 tomato;
 }
 .app h1 {
   margin-bottom: 40px;
   font-size: 40px;
+}
+.app h1::first-letter {
+  font-size: 50px;
+  color: tomato;
 }
