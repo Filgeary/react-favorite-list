@@ -1,10 +1,12 @@
 .app {
   margin: 0 auto;
-  width: 70%;
+  padding: 40px;
+  width: 80%;
   max-width: 800px;
   text-align: center;
-  /* background-color: #ddd; */
+  border: 2px solid tomato;
 }
 .app h1 {
-  margin-bottom: 28px;
+  margin-bottom: 40px;
+  font-size: 40px;
 }
