@@ -1,0 +1,52 @@
+.app-list-item {
+  align-items: center;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #ccc;
+}
+.app-list-item button {
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+.app-list-item button:focus {
+  box-shadow: none;
+}
+.app-list-item-label {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.5s all;
+}
+.app-list-item .btn-star {
+  border-radius: 50%;
+}
+.app-list-item .btn-star img {
+  width: 20px;
+  height: 20px;
+}
+.app-list-item .btn-trash img {
+  width: 20px;
+  height: 20px;
+}
+.app-list-item .btn-heart {
+  border: none;
+  cursor: default;
+}
+.app-list-item .btn-heart img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.15;
+}
+.app-list-item .icon-heart {
+  opacity: 0.2;
+}
+.app-list-item.like .icon-heart {
+  opacity: 0.8;
+}
+.app-list-item.important .app-list-item-label {
+  color: #ffd700;
+}
+.app-list-item.important .btn-star {
+  opacity: 0.2;
+}

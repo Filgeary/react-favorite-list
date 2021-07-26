@@ -1,0 +1,8 @@
+.search-panel {
+  margin: 20px 0;
+}
+
+.search-panel .search-input {
+  padding: 12px 20px;
+  font-style: italic;
+}
