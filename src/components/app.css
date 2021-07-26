@@ -1,6 +1,10 @@
 .app {
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
   max-width: 800px;
   text-align: center;
+  /* background-color: #ddd; */
+}
+.app h1 {
+  margin-bottom: 28px;
 }
