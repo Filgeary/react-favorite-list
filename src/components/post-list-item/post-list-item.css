@@ -16,10 +16,12 @@
   display: block;
   cursor: pointer;
   user-select: none;
-  transition: 0.5s all;
+  transition: 0.4s all;
 }
 .app-list-item .btn-star {
   border-radius: 50%;
+  background-color: #fff;
+  transition: 0.4s all;
 }
 .app-list-item .btn-star img {
   width: 20px;
@@ -37,16 +39,14 @@
   width: 20px;
   height: 20px;
   opacity: 0.15;
+  transition: 0.4s all;
 }
-.app-list-item .icon-heart {
-  opacity: 0.2;
-}
-.app-list-item.like .icon-heart {
+.app-list-item.like .btn-heart img {
   opacity: 0.8;
 }
 .app-list-item.important .app-list-item-label {
-  color: #ffd700;
+  color: tomato;
 }
 .app-list-item.important .btn-star {
-  opacity: 0.2;
+  background-color: hsl(0, 0%, 20%);
 }
