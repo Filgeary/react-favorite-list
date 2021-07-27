@@ -8,6 +8,28 @@ import PostAddForm from './post-add-form/post-add-form';
 
 import './app.css';
 
+// data from virtual API
+const dataPostList = [
+  {
+    title: 'Very Short Text',
+    important: true,
+    like: false,
+    id: Math.random(),
+  },
+  {
+    title: 'Very Medium Title Record Text',
+    important: false,
+    like: true,
+    id: Math.random(),
+  },
+  {
+    title: 'Very very Long long Text Title Record',
+    important: false,
+    like: false,
+    id: Math.random(),
+  },
+];
+
 function App() {
   return (
     <div className="app">
@@ -18,7 +40,7 @@ function App() {
         <SearchPanel />
         <PostStatusFilter />
       </div>
-      <PostList />
+      <PostList posts={dataPostList} />
       <PostAddForm />
     </div>
   );
