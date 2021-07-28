@@ -27,7 +27,7 @@ class PostListItem extends Component {
   }
 
   render() {
-    const { title } = this.props;
+    const { title, onRemovePost } = this.props;
     const { important, like } = this.state;
 
     let classList = 'app-list-item d-flex justify-content-between';
@@ -48,7 +48,11 @@ class PostListItem extends Component {
           >
             <img src={iconStar} alt="#" />
           </button>
-          <button type="button" className="btn-trash btn-sm">
+          <button
+            type="button"
+            className="btn-trash btn-sm"
+            onClick={onRemovePost}
+          >
             <img src={iconTrash} alt="#" />
           </button>
           <button type="button" className="btn-heart btn-sm">

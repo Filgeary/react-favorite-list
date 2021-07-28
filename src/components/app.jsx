@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // components
 import AppHeader from './app-header/app-header';
@@ -13,20 +13,45 @@ import { data as dataPostList } from '../data/data';
 // css
 import './app.css';
 
-function App() {
-  return (
-    <div className="app">
-      <h1>React-favorite-list</h1>
-      <hr />
-      <AppHeader />
-      <div className="search-panel d-flex">
-        <SearchPanel />
-        <PostStatusFilter />
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: dataPostList,
+    };
+
+    this.removePostHandler = this.removePostHandler.bind(this);
+  }
+
+  removePostHandler(id) {
+    this.setState(({ data }) => {
+      const newData = [...data].filter(item => item.id !== id);
+
+      return {
+        data: newData,
+      };
+    });
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <h1>React-favorite-list</h1>
+        <hr />
+        <AppHeader />
+        <div className="search-panel d-flex">
+          <SearchPanel />
+          <PostStatusFilter />
+        </div>
+        <PostList
+          posts={this.state.data}
+          onRemovePost={this.removePostHandler}
+        />
+        <PostAddForm />
       </div>
-      <PostList posts={dataPostList} />
-      <PostAddForm />
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
