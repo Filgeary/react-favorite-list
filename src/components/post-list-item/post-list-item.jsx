@@ -14,15 +14,15 @@ class PostListItem extends Component {
       like: this.props.like,
     };
 
-    this.onImportantHandler = this.onImportantHandler.bind(this);
-    this.onLikeHandler = this.onLikeHandler.bind(this);
+    this.buttonImportantHandler = this.buttonImportantHandler.bind(this);
+    this.likeHandler = this.likeHandler.bind(this);
   }
 
-  onImportantHandler() {
+  buttonImportantHandler() {
     this.setState(({ important }) => ({ important: !important }));
   }
 
-  onLikeHandler() {
+  likeHandler() {
     this.setState(({ like }) => ({ like: !like }));
   }
 
@@ -37,14 +37,14 @@ class PostListItem extends Component {
 
     return (
       <li className={classList}>
-        <span className="app-list-item-label" onClick={this.onLikeHandler}>
+        <span className="app-list-item-label" onClick={this.likeHandler}>
           {title}
         </span>
         <div className="d-flex justify-content-center align-items-center">
           <button
             type="button"
             className="btn-star btn-sm"
-            onClick={this.onImportantHandler}
+            onClick={this.buttonImportantHandler}
           >
             <img src={iconStar} alt="#" />
           </button>
