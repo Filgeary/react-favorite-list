@@ -1,34 +1,17 @@
 import React from 'react';
 
+// components
 import AppHeader from './app-header/app-header';
 import SearchPanel from './search-panel/search-panel';
 import PostStatusFilter from './post-status-filter/post-status-filter';
 import PostList from './post-list/post-list';
 import PostAddForm from './post-add-form/post-add-form';
 
-import './app.css';
-
 // data from virtual API
-const dataPostList = [
-  {
-    title: 'Very Short Text',
-    important: true,
-    like: false,
-    id: Math.random(),
-  },
-  {
-    title: 'Very Medium Title Record Text',
-    important: false,
-    like: true,
-    id: Math.random(),
-  },
-  {
-    title: 'Very very Long long Text Title Record',
-    important: false,
-    like: false,
-    id: Math.random(),
-  },
-];
+import { data as dataPostList } from '../data/data';
+
+// css
+import './app.css';
 
 function App() {
   return (
