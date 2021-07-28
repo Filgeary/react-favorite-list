@@ -21,7 +21,25 @@ class App extends Component {
       data: dataPostList,
     };
 
+    this.addPostHandler = this.addPostHandler.bind(this);
     this.removePostHandler = this.removePostHandler.bind(this);
+  }
+
+  addPostHandler(evt) {
+    evt.preventDefault();
+
+    const newPost = {
+      title: Math.random().toFixed(10),
+      important: false,
+      like: false,
+      id: Math.random(),
+    };
+
+    this.setState(({ data }) => {
+      return {
+        data: [...data, newPost],
+      };
+    });
   }
 
   removePostHandler(id) {
@@ -48,7 +66,7 @@ class App extends Component {
           posts={this.state.data}
           onRemovePost={this.removePostHandler}
         />
-        <PostAddForm />
+        <PostAddForm onSubmitAddPost={this.addPostHandler} />
       </div>
     );
   }
