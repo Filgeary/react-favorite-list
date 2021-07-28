@@ -14,20 +14,20 @@ class PostListItem extends Component {
       like: this.props.like,
     };
 
-    this.onImportantHandler = this.onImportantHandler.bind(this);
-    this.onLikeHandler = this.onLikeHandler.bind(this);
+    this.buttonImportantHandler = this.buttonImportantHandler.bind(this);
+    this.likeHandler = this.likeHandler.bind(this);
   }
 
-  onImportantHandler() {
+  buttonImportantHandler() {
     this.setState(({ important }) => ({ important: !important }));
   }
 
-  onLikeHandler() {
+  likeHandler() {
     this.setState(({ like }) => ({ like: !like }));
   }
 
   render() {
-    const { title } = this.props;
+    const { title, onRemovePost } = this.props;
     const { important, like } = this.state;
 
     let classList = 'app-list-item d-flex justify-content-between';
@@ -37,18 +37,22 @@ class PostListItem extends Component {
 
     return (
       <li className={classList}>
-        <span className="app-list-item-label" onClick={this.onLikeHandler}>
+        <span className="app-list-item-label" onClick={this.likeHandler}>
           {title}
         </span>
         <div className="d-flex justify-content-center align-items-center">
           <button
             type="button"
             className="btn-star btn-sm"
-            onClick={this.onImportantHandler}
+            onClick={this.buttonImportantHandler}
           >
             <img src={iconStar} alt="#" />
           </button>
-          <button type="button" className="btn-trash btn-sm">
+          <button
+            type="button"
+            className="btn-trash btn-sm"
+            onClick={onRemovePost}
+          >
             <img src={iconTrash} alt="#" />
           </button>
           <button type="button" className="btn-heart btn-sm">
