@@ -25,11 +25,9 @@ class App extends Component {
     this.removePostHandler = this.removePostHandler.bind(this);
   }
 
-  addPostHandler(evt) {
-    evt.preventDefault();
-
+  addPostHandler(body) {
     const newPost = {
-      title: Math.random().toFixed(10),
+      title: body,
       important: false,
       like: false,
       id: Math.random(),
