@@ -25,6 +25,8 @@ class App extends Component {
     this.addPostHandler = this.addPostHandler.bind(this);
     this.removePostHandler = this.removePostHandler.bind(this);
     this.changeInputHandler = this.changeInputHandler.bind(this);
+    this.toggleImportantHandler = this.toggleImportantHandler.bind(this);
+    this.toggleLikedHandler = this.toggleLikedHandler.bind(this);
   }
 
   addPostHandler(body) {
@@ -68,21 +70,53 @@ class App extends Component {
     });
   }
 
+  changeStateByProp(id, prop) {
+    this.setState(({ data }) => {
+      const index = data.findIndex(item => item.id === id);
+      const oldItem = data[index];
+      const newItem = { ...oldItem, [prop]: !oldItem[prop] };
+      const newArr = [...data];
+      newArr.splice(index, 1, newItem);
+
+      return {
+        data: newArr,
+      };
+    });
+  }
+
+  toggleImportantHandler(id) {
+    this.changeStateByProp(id, 'important');
+  }
+
+  toggleLikedHandler(id) {
+    this.changeStateByProp(id, 'like');
+  }
+
   render() {
     const { data, searchPanelInputValue } = this.state;
 
+    const totalPostsCount = data.length;
+    const likedPostsCount = [...data].filter(item => item.like).length;
     const visiblePosts = this.findPost(data, searchPanelInputValue);
 
     return (
       <div className="app">
         <h1>React-favorite-list</h1>
         <hr />
-        <AppHeader />
+
+        <AppHeader totalPosts={totalPostsCount} likedPosts={likedPostsCount} />
+
         <div className="search-panel d-flex">
           <SearchPanel onChangeInput={this.changeInputHandler} />
           <PostStatusFilter />
         </div>
-        <PostList posts={visiblePosts} onRemovePost={this.removePostHandler} />
+
+        <PostList
+          posts={visiblePosts}
+          onRemovePost={this.removePostHandler}
+          onToggleImportant={this.toggleImportantHandler}
+          onToggleLiked={this.toggleLikedHandler}
+        />
         <PostAddForm onSubmitAddPost={this.addPostHandler} />
       </div>
     );
