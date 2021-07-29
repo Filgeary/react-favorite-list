@@ -7,7 +7,7 @@ const SearchPanel = () => {
       type="text"
       className="form-control search-input"
       name="search-panel"
-      placeholder="Find by Records"
+      placeholder="Find Post"
     />
   );
 };
