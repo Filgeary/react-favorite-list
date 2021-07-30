@@ -5,6 +5,7 @@
 }
 .app-list-item button {
   margin: 8px;
+  background-color: #fff;
   border: none;
   cursor: pointer;
   border: 2px solid #ccc;
@@ -20,7 +21,6 @@
 }
 .app-list-item .btn-star {
   border-radius: 50%;
-  background-color: #fff;
   transition: 0.4s all;
 }
 .app-list-item .btn-star img {
