@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-favorite-list/static/css/main.f1cebccc.chunk.css",
+    "main.js": "/react-favorite-list/static/js/main.d0c287eb.chunk.js",
+    "main.js.map": "/react-favorite-list/static/js/main.d0c287eb.chunk.js.map",
+    "runtime-main.js": "/react-favorite-list/static/js/runtime-main.1b01620a.js",
+    "runtime-main.js.map": "/react-favorite-list/static/js/runtime-main.1b01620a.js.map",
+    "static/css/2.91386357.chunk.css": "/react-favorite-list/static/css/2.91386357.chunk.css",
+    "static/js/2.a009bd90.chunk.js": "/react-favorite-list/static/js/2.a009bd90.chunk.js",
+    "static/js/2.a009bd90.chunk.js.map": "/react-favorite-list/static/js/2.a009bd90.chunk.js.map",
+    "index.html": "/react-favorite-list/index.html",
+    "static/css/2.91386357.chunk.css.map": "/react-favorite-list/static/css/2.91386357.chunk.css.map",
+    "static/css/main.f1cebccc.chunk.css.map": "/react-favorite-list/static/css/main.f1cebccc.chunk.css.map",
+    "static/js/2.a009bd90.chunk.js.LICENSE.txt": "/react-favorite-list/static/js/2.a009bd90.chunk.js.LICENSE.txt",
+    "static/media/heart-fill.41ffa23d.svg": "/react-favorite-list/static/media/heart-fill.41ffa23d.svg",
+    "static/media/star-fill.f291972e.svg": "/react-favorite-list/static/media/star-fill.f291972e.svg",
+    "static/media/trash-fill.bec657fd.svg": "/react-favorite-list/static/media/trash-fill.bec657fd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b01620a.js",
+    "static/css/2.91386357.chunk.css",
+    "static/js/2.a009bd90.chunk.js",
+    "static/css/main.f1cebccc.chunk.css",
+    "static/js/main.d0c287eb.chunk.js"
+  ]
+}
