@@ -20,6 +20,7 @@ class App extends Component {
     this.state = {
       data: dataPostList,
       searchPanelInputValue: '',
+      postStatusFilterValue: 'all',
     };
 
     this.addPostHandler = this.addPostHandler.bind(this);
@@ -27,6 +28,7 @@ class App extends Component {
     this.changeInputHandler = this.changeInputHandler.bind(this);
     this.toggleImportantHandler = this.toggleImportantHandler.bind(this);
     this.toggleLikedHandler = this.toggleLikedHandler.bind(this);
+    this.filterSelectHandler = this.filterSelectHandler.bind(this);
   }
 
   addPostHandler(body) {
@@ -92,12 +94,32 @@ class App extends Component {
     this.changeStateByProp(id, 'like');
   }
 
+  filterPosts(postList, filter) {
+    switch (filter) {
+      case 'like':
+        return postList.filter(item => item.like);
+
+      default:
+        return postList;
+    }
+  }
+  filterSelectHandler(filter) {
+    this.setState(() => {
+      return {
+        postStatusFilterValue: filter,
+      };
+    });
+  }
+
   render() {
-    const { data, searchPanelInputValue } = this.state;
+    const { data, searchPanelInputValue, postStatusFilterValue } = this.state;
 
     const totalPostsCount = data.length;
     const likedPostsCount = [...data].filter(item => item.like).length;
-    const visiblePosts = this.findPost(data, searchPanelInputValue);
+    const visiblePosts = this.filterPosts(
+      this.findPost(data, searchPanelInputValue),
+      postStatusFilterValue,
+    );
 
     return (
       <div className="app">
@@ -108,7 +130,10 @@ class App extends Component {
 
         <div className="search-panel d-flex">
           <SearchPanel onChangeInput={this.changeInputHandler} />
-          <PostStatusFilter />
+          <PostStatusFilter
+            filter={postStatusFilterValue}
+            onFilterSelect={this.filterSelectHandler}
+          />
         </div>
 
         <PostList
