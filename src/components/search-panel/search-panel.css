@@ -5,4 +5,5 @@
 .search-panel .search-input {
   padding: 12px 20px;
   font-style: italic;
+  border-color: hsl(208, 7%, 70%);
 }

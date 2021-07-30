@@ -1,5 +1,6 @@
 .bottom-panel input {
   padding: 12px 20px;
+  border-color: hsl(216, 98%, 70%);
 }
 .bottom-panel button {
   width: 150px;

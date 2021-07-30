@@ -7,7 +7,7 @@
   text-align: center;
   border: 2px solid tomato;
   border-radius: 8px;
-  background-color: hsl(203, 75%, 95%);
+  /* background-color: #fff; */
   box-shadow: 10px 10px 0 tomato;
 }
 .app h1 {
