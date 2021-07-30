@@ -6,3 +6,4 @@
 - props, state, setState
 - onClick
 - custom Events
+- onChange, onSubmit

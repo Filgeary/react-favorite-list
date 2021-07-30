@@ -1,7 +1,6 @@
 .app {
   margin: 0 auto;
-  padding: 50px;
-  padding-bottom: 70px;
+  padding: 30px 50px 70px 50px;
   width: 80%;
   max-width: 800px;
   text-align: center;

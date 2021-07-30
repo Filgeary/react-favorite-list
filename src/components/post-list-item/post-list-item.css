@@ -5,6 +5,7 @@
 }
 .app-list-item button {
   margin: 8px;
+  background-color: #fff;
   border: none;
   cursor: pointer;
   border: 2px solid #ccc;
@@ -20,7 +21,6 @@
 }
 .app-list-item .btn-star {
   border-radius: 50%;
-  background-color: #fff;
   transition: 0.4s all;
 }
 .app-list-item .btn-star img {
@@ -38,11 +38,11 @@
 .app-list-item .btn-heart img {
   width: 20px;
   height: 20px;
-  opacity: 0.15;
+  opacity: 0.2;
   transition: 0.4s all;
 }
 .app-list-item.like .btn-heart img {
-  opacity: 0.8;
+  opacity: 1;
 }
 .app-list-item.important .app-list-item-label {
   color: tomato;
