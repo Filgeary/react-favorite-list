@@ -21,7 +21,7 @@ const PostStatusFilter = ({ filter, onFilterSelect }) => {
       <button
         type="button"
         className={`btn ${classList}`}
-        key={title + Math.random().toFixed(10)}
+        key={title}
         onClick={() => onFilterSelect(filterValue)}
       >
         {title}

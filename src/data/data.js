@@ -4,18 +4,18 @@ export const data = [
     title: 'Very Short Text',
     important: true,
     like: false,
-    id: Math.random(),
+    id: 1,
   },
   {
     title: 'Very Medium Title Record Text',
     important: false,
     like: true,
-    id: Math.random(),
+    id: 2,
   },
   {
     title: 'Very very Long long Text Title Record',
     important: false,
     like: false,
-    id: Math.random(),
+    id: 3,
   },
 ];
