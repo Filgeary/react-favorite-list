@@ -36,7 +36,7 @@ class App extends Component {
       title: body,
       important: false,
       like: false,
-      id: Math.random(),
+      id: Date.now(),
     };
 
     this.setState(({ data }) => {
